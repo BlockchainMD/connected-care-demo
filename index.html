@@ -1,0 +1,54 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#003da5">
+  <meta name="robots" content="noindex,nofollow">
+  <meta name="description" content="CenterWell Connected Care clinical workspace.">
+  <title>Connected Care | CenterWell</title>
+  <link rel="stylesheet" href="./style.css?v=suspect-actions-1">
+  <script src="./app.js?v=suspect-actions-1" defer></script>
+</head>
+<body>
+<svg class="icon-library" xmlns="http://www.w3.org/2000/svg" aria-hidden="true"><defs>
+  <symbol id="i-grid" viewBox="0 0 24 24"><rect x="3" y="3" width="7" height="7" rx="1.3"/><rect x="14" y="3" width="7" height="7" rx="1.3"/><rect x="3" y="14" width="7" height="7" rx="1.3"/><rect x="14" y="14" width="7" height="7" rx="1.3"/></symbol>
+  <symbol id="i-people" viewBox="0 0 24 24"><circle cx="9" cy="8" r="3"/><path d="M3 20v-1a6 6 0 0 1 12 0v1M17 5a3 3 0 0 1 0 6m2 3a5 5 0 0 1 2 4v2"/></symbol>
+  <symbol id="i-chart" viewBox="0 0 24 24"><path d="M4 4v16h16M8 16v-4m5 4V8m5 8V5"/></symbol>
+  <symbol id="i-review" viewBox="0 0 24 24"><path d="M7 3h10l3 3v15H7zM17 3v4h3M10 11h7m-7 4h7M3 7v12"/></symbol>
+  <symbol id="i-message" viewBox="0 0 24 24"><path d="M4 4h16v12H9l-5 4V4zm4 5h8m-8 3h5"/></symbol>
+  <symbol id="i-flow" viewBox="0 0 24 24"><circle cx="5" cy="12" r="2"/><circle cx="19" cy="6" r="2"/><circle cx="19" cy="18" r="2"/><path d="M7 12h3c4 0 3-6 7-6M10 12c4 0 3 6 7 6"/></symbol>
+  <symbol id="i-arrow" viewBox="0 0 24 24"><path d="M4 12h15m-6-6 6 6-6 6"/></symbol>
+  <symbol id="i-back" viewBox="0 0 24 24"><path d="M19 12H4m6-6-6 6 6 6"/></symbol>
+  <symbol id="i-check" viewBox="0 0 24 24"><path d="m5 12 4 4L19 6"/></symbol>
+  <symbol id="i-clock" viewBox="0 0 24 24"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3 2"/></symbol>
+  <symbol id="i-file" viewBox="0 0 24 24"><path d="M6 3h8l4 4v14H6zM14 3v5h4M9 12h6m-6 4h6"/></symbol>
+  <symbol id="i-link" viewBox="0 0 24 24"><path d="m9 15 6-6M8 10l2-2a4 4 0 0 1 6 0m-1 6-2 2a4 4 0 0 1-6-6l1-1"/></symbol>
+  <symbol id="i-plus" viewBox="0 0 24 24"><path d="M12 5v14M5 12h14"/></symbol>
+  <symbol id="i-info" viewBox="0 0 24 24"><circle cx="12" cy="12" r="9"/><path d="M12 11v5M12 8h.01"/></symbol>
+  <symbol id="i-reset" viewBox="0 0 24 24"><path d="M4 7v5h5M5 12a7 7 0 1 1 2 5"/></symbol>
+  <symbol id="i-close" viewBox="0 0 24 24"><path d="m6 6 12 12M18 6 6 18"/></symbol>
+</defs></svg>
+<div class="app-shell">
+  <aside class="sidebar" aria-label="Main navigation">
+    <a class="logo-wrap" href="#patient" aria-label="Connected Care home"><img src="./assets/centerwell_spc.svg" alt="CenterWell Senior Primary Care"></a>
+    <div class="product-name"><span class="product-icon"><svg class="icon"><use href="#i-flow"></use></svg></span><span>Connected Care<small>Clinical workspace</small></span></div>
+    <nav id="navigation" aria-label="Sections">
+      <p class="nav-label">WORKFLOW</p>
+      <button type="button" class="nav-item" data-page="patient"><svg class="icon"><use href="#i-grid"></use></svg><span>Patient dashboard</span></button>
+      <button type="button" class="nav-item" data-page="huddle"><svg class="icon"><use href="#i-people"></use></svg><span>Pre-visit huddle</span></button>
+      <button type="button" class="nav-item" data-page="quality"><svg class="icon"><use href="#i-chart"></use></svg><span>Provider scorecard</span></button>
+      <button type="button" class="nav-item" data-page="feedback"><svg class="icon"><use href="#i-message"></use></svg><span>Provider feedback</span></button>
+      <button type="button" class="nav-item" data-page="review"><svg class="icon"><use href="#i-review"></use></svg><span>Physician review</span><span class="nav-count" id="queue-count">0</span></button>
+    </nav>
+    <div class="sidebar-bottom"><button type="button" id="reset-demo" class="reset-button"><svg class="icon"><use href="#i-reset"></use></svg>Reset</button></div>
+  </aside>
+  <main id="main-content" class="main" tabindex="-1">
+    <div class="topline"><div class="breadcrumbs"><span>CONNECTED CARE</span><span class="crumb-slash">/</span><span id="breadcrumb-current">Patient dashboard</span></div><div class="top-actions"><button class="mobile-reset" id="reset-demo-mobile" type="button">Reset</button></div></div>
+    <div class="main-inner"><div id="notice" class="notice" role="status" aria-live="polite" hidden></div><div id="page"></div></div>
+  </main>
+</div>
+<dialog id="modal" aria-labelledby="modal-title"><div id="modal-body"></div></dialog>
+<noscript><div class="noscript">JavaScript is needed to use this workspace.</div></noscript>
+</body>
+</html>
